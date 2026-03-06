@@ -2,7 +2,7 @@
 
 int main()
 {
-	int min_int = -2147483647;
+	int min_int = -2147483647; //4 bytes
 	int max_int = 2147483647;
 
 	// unsigned int max_uint = 4'294'967'295;
