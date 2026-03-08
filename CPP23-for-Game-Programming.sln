@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Floats", "Floats\Floats.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Booleans", "Booleans\Booleans.vcxproj", "{24E9569A-4867-4FC0-9BF1-28F8CD69BF05}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Characters", "Characters\Characters.vcxproj", "{E6BCD60D-6428-4B15-9B62-58456EE63C3B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{24E9569A-4867-4FC0-9BF1-28F8CD69BF05}.Release|x64.Build.0 = Release|x64
 		{24E9569A-4867-4FC0-9BF1-28F8CD69BF05}.Release|x86.ActiveCfg = Release|Win32
 		{24E9569A-4867-4FC0-9BF1-28F8CD69BF05}.Release|x86.Build.0 = Release|Win32
+		{E6BCD60D-6428-4B15-9B62-58456EE63C3B}.Debug|x64.ActiveCfg = Debug|x64
+		{E6BCD60D-6428-4B15-9B62-58456EE63C3B}.Debug|x64.Build.0 = Debug|x64
+		{E6BCD60D-6428-4B15-9B62-58456EE63C3B}.Debug|x86.ActiveCfg = Debug|Win32
+		{E6BCD60D-6428-4B15-9B62-58456EE63C3B}.Debug|x86.Build.0 = Debug|Win32
+		{E6BCD60D-6428-4B15-9B62-58456EE63C3B}.Release|x64.ActiveCfg = Release|x64
+		{E6BCD60D-6428-4B15-9B62-58456EE63C3B}.Release|x64.Build.0 = Release|x64
+		{E6BCD60D-6428-4B15-9B62-58456EE63C3B}.Release|x86.ActiveCfg = Release|Win32
+		{E6BCD60D-6428-4B15-9B62-58456EE63C3B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
