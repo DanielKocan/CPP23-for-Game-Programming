@@ -1,5 +1,8 @@
 #include <iostream>
+#include <sstream>
 #include <vector>
+
+#define skip continue
 
 void SimpleCalculator()
 {
@@ -59,44 +62,79 @@ void SimpleCalculator()
 
 void AdvancedCalculator()
 {
-	/*std::cout << "Write number (to finish write 'd')" << std::endl;
-	double result = 0, input;
-	char op;
-	std::cin >> result;
+	std::vector<double> numbers;
+	std::vector<char> symbols;
 
-	while (std::cin.fail())
+	std::string input;
+	std::cout << "Write number expresion (0/9 digit) and (+,-,/,*)" << std::endl;
+
+	std::getline(std::cin, input);
+
+	for (size_t i = 0; i < input.length(); i++) // Get all numbers and symbols
 	{
-		std::cout << "Write operator (to finish write 'd')" << std::endl;
-		std::cin >> op;
+		if (input[i] == ' ') skip;
 
-		switch (op) {
-
-		case '+':
-			std::cin >> input;
-			result = result + input;
-			break;
-
-		case '-':
-			std::cin >> input;
-			result = result - input;
-			break;
-
-		case '*':
-
-			result = number * number2;
-			break;
-
-		case '/':
-			result = number / number2;
-			break;
+		if (input[i] >= '0' && input[i] <= '9') // add number
+		{
+			numbers.push_back(input[i] - '0');
+		}
+		else if (input[i] == '/' || input[i] == '*' || input[i] == '+' || input[i] == '-')
+		{
+			symbols.push_back(input[i]);
 		}
 	}
-	*/
+
+	for (size_t i = 0; i < symbols.size(); i++)
+	{
+		if (symbols[i] == '/' || symbols[i] == '*')
+		{
+			if (symbols[i] == '/')
+			{
+				numbers[i] = numbers[i] / numbers[i + 1];
+				numbers.erase(numbers.begin() + i + 1); // For deleting an element at index i and shifting everything left
+				symbols.erase(symbols.begin() + i);
+				i--;
+			}
+			else
+			{
+				numbers[i] = numbers[i] * numbers[i + 1];
+				numbers.erase(numbers.begin() + i + 1); // For deleting an element at index i and shifting everything left
+				symbols.erase(symbols.begin() + i);
+				i--;
+			}
+		}
+	}
+
+	for (size_t i = 0; i < symbols.size(); i++)
+	{
+		if (symbols[i] == '-')
+		{
+			numbers[i] = numbers[i] - numbers[i + 1];
+			numbers.erase(numbers.begin() + i + 1); // For deleting an element at index i and shifting everything left
+			symbols.erase(symbols.begin() + i);
+			i--;
+		}
+		else
+		{
+			numbers[i] = numbers[i] + numbers[i + 1];
+			numbers.erase(numbers.begin() + i + 1); // For deleting an element at index i and shifting everything left
+			symbols.erase(symbols.begin() + i);
+			i--;
+		}
+	}
+
+	double result = numbers[0];
+
+	std::cout << "Result : " << result << std::endl;
+
+	return;
 }
 
 
 int main()
 {
-	void SimpleCalculator();
-	//void AdvancedCalculator();
+	//SimpleCalculator();
+    AdvancedCalculator();
+
+	return 0;
 }
