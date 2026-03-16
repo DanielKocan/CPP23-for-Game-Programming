@@ -40,8 +40,8 @@ int main()
 
 	for (int i = 0; i < 12; i++)
 	{
-		std::cout << "Values: " << *pvalues << "at index " << i;
-		pvalues++;
+		std::cout << "Values: " << *pvalues << " at index " << i << std::endl;
+		pvalues2d++;
 	}
 
 	return 0;
