@@ -18,6 +18,8 @@ int main()
 	}
 
 	int* array = new int[arraySize];
+	// new int[10]{}			  // Array of 10 ints (zero-initialized)
+	// new int(10) or new int{10} // Single int with value 10
 
 	for (int i = 0; i < arraySize; i++)
 	{
