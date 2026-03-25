@@ -6,7 +6,7 @@ decltype(auto) max(const T& a, const U& b) //if someting is not correct the decl
 	return a > b ? a : b;
 }
 
-// abreaviated template fucntoin c++ 20, same as above
+// abbreviated function templates fucntoin c++ 20, same as above
 decltype(auto) max2(const auto& a, const auto& b) 
 {
 	return a > b ? a : b;
@@ -15,6 +15,18 @@ decltype(auto) max2(const auto& a, const auto& b)
 template<typename T>
 void swap(T& a, T& b) 
 {
+	auto tmp = std::move(a); // tmp steals a's pointer (After `std::move(a)`, the pointer inside `a` is set to `nullptr` (or something equivalent).)
+	// Dereferencing a `nullptr` causes a crash — a segmentation fault.
+	// So this is why the rule exists — after `std::move(a)`, don't read from `a` until you assign
+
+	a = std::move(b); // a steals b's pointer
+	b = std::move(tmp); // b steals tmp's pointer
+}
+
+
+void swap2(auto& a, auto& b)
+{
+	// auto ignores references and const. it just gives variable thats why we are using move to avoid coppies
 	auto tmp = std::move(a); // tmp steals a's pointer (After `std::move(a)`, the pointer inside `a` is set to `nullptr` (or something equivalent).)
 	// Dereferencing a `nullptr` causes a crash — a segmentation fault.
 	// So this is why the rule exists — after `std::move(a)`, don't read from `a` until you assign
