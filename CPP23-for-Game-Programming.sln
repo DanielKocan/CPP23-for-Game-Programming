@@ -63,6 +63,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lambdas", "Lambdas\Lambdas.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StatisticsCalculator", "StatisticsCalculator\StatisticsCalculator.vcxproj", "{2A7D3D0D-5905-4240-BCCE-E3A445279321}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LambdaFunctions", "LambdaFunctions\LambdaFunctions.vcxproj", "{BDEB3EAA-0713-4E14-9A4C-4301072510DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -311,6 +313,14 @@ Global
 		{2A7D3D0D-5905-4240-BCCE-E3A445279321}.Release|x64.Build.0 = Release|x64
 		{2A7D3D0D-5905-4240-BCCE-E3A445279321}.Release|x86.ActiveCfg = Release|Win32
 		{2A7D3D0D-5905-4240-BCCE-E3A445279321}.Release|x86.Build.0 = Release|Win32
+		{BDEB3EAA-0713-4E14-9A4C-4301072510DA}.Debug|x64.ActiveCfg = Debug|x64
+		{BDEB3EAA-0713-4E14-9A4C-4301072510DA}.Debug|x64.Build.0 = Debug|x64
+		{BDEB3EAA-0713-4E14-9A4C-4301072510DA}.Debug|x86.ActiveCfg = Debug|Win32
+		{BDEB3EAA-0713-4E14-9A4C-4301072510DA}.Debug|x86.Build.0 = Debug|Win32
+		{BDEB3EAA-0713-4E14-9A4C-4301072510DA}.Release|x64.ActiveCfg = Release|x64
+		{BDEB3EAA-0713-4E14-9A4C-4301072510DA}.Release|x64.Build.0 = Release|x64
+		{BDEB3EAA-0713-4E14-9A4C-4301072510DA}.Release|x86.ActiveCfg = Release|Win32
+		{BDEB3EAA-0713-4E14-9A4C-4301072510DA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
